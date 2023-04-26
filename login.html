@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+  </head>
+  <body>
+    <div class="container mx-auto lg:flex lg:max-w-full lg:my-0">
+      <div class="container max-w-md mx-auto my-3 lg:flex-1 lg:py-28">
+        <img src="../image/Sibook.png" alt="Logo Sibook" class="mx-auto w-40 lg:hidden" />
+        <div class="text-center lg:text-left">
+          <h3 class="font-bold text-2xl text-slate-700">Selamat Datang!</h3>
+          <p class="text-slate-500">Silakan login untuk masuk ke akunmu ya!</p>
+        </div>
+        <!-- Sign In with Google -->
+        <div class="my-4 shadow">
+          <div id="g_id_onload" data-client_id="YOUR_GOOGLE_CLIENT_ID" data-login_uri="https://your.domain/your_login_endpoint" data-auto_prompt="false"></div>
+          <div class="g_id_signin" data-type="standard" data-size="large" data-theme="outline" data-text="sign_in_with" data-shape="rectangular" data-logo_alignment="left"></div>
+        </div>
+
+        <p class="text-sm text-slate-500 text-center my-1">or</p>
+
+        <!-- Sign In with email -->
+        <div class="my-2">
+          <form action="" method="post">
+            <label for="email">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email"
+                class="px-3 py-2 border shadow rounded w-full block text-sm placeholder:text-slate-500 focus:outline-none focus:ring-1 focus:ring-sky-500 invalid:text-pink-700 invalid:focus:ring-pink-700 invalid:focus:border-pink-700 peer"
+              />
+
+              <p class="text-sm m-1 text-pink-500 invisible peer-invalid:visible">Email invalid</p>
+            </label>
+            <label for="password">
+              <input type="password" name="password" id="password" placeholder="Password" class="px-3 py-2 border shadow rounded w-full block text-sm placeholder:text-slate-500 focus:outline-none focus:ring-1 focus:ring-sky-500" />
+            </label>
+            <div class="my-2 text-slate-500 text-sm grid grid-cols-2">
+              <label> <input type="checkbox" value="remember-me" /> Remember me </label>
+              <a href="" class="text-right hover:text-teal-500">Lupa Password</a>
+            </div>
+            <button class="w-full shadow-sm bg-teal-500 text-white py-2 my-7 rounded block hover:bg-white hover:text-teal-500 hover:border hover:border-teal-500 hover:font-semibold" type="submit">Sign in</button>
+          </form>
+          <!-- end form login -->
+          <p class="text-sm text-slate-500 text-center lg:text-left">Belum punya akun? <a href="" class="text-slate-700 hover:text-teal-500">Daftar Sekarang</a></p>
+        </div>
+      </div>
+      <div class="hidden lg:flex lg:w-1/2 lg:border-teal-500 justify-center lg:py-32 lg:bg-teal-500">
+        <img src="../image/Sibook.png" alt="Logo Sibook" class="object-cover h-72 bg-white rounded-lg hover:scale-110 transition-all duration-500" />
+      </div>
+    </div>
+  </body>
+</html>
