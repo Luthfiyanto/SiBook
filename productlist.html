@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.0/dist/cdn.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- PRODUCT LIST CONTENT -->
+
+    <div class="bg-white shadow-md">
+      <div class="mx-auto max-w-2xl py-2 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+        <h2 class="text-2xl font-bold tracking-tight text-teal-600">Ilmu Komputer</h2>
+
+        <!-- Disini bagian data yang ditampilin biar bisa diloop -->
+        <div x-data="{ books: [
+        {id:1, name: 'Belajar Pemrograman Data dengan Python', type: 'Ilmu Komputer',year:2021},
+        {id:2, name: 'Pemrograman Berorientasi Objek Java', type: 'Ilmu Komputer',year:2021},
+        {id:3, name: 'Algoritma Pemrograman C++', type: 'Ilmu Komputer',year:2021},
+        {id:4, name: 'Dasar Pemrograman Javascript', type: 'Ilmu Komputer',year:2021},
+        
+        ]}">
+
+        <!-- Disini bagian card yang bakal diloopfor datanya dimasukin dibagian x-text atau disesuaikan -->
+        <ul  class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+          <template x-for="book in books">
+            
+            <li class="group relative">
+              <div class="h-40 aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-60">
+                <img src="https://source.unsplash.com/500x300?computer" alt="Front of men&#039;s Basic Tee in black." class="h-full w-full object-cover object-center lg:h-full lg:w-full hover:scale-125 transition duration-1000" />
+              </div>
+              <div class="mt-4">
+                <h3 class="text-sm font-medium text-teal-700">
+                  <a href="#" x-text="book.name">
+                    <!-- <span aria-hidden="true" class="absolute inset-0"></span> -->
+                    
+                  </a>
+                </h3>
+                <div class="flex justify-between">
+                  <p class="text-sm text-slate-400" x-text="book.type"></p>
+                  <p class="text-sm font-medium text-slate-400" x-text="book.year"></p>
+                </div>
+              </div>
+            </li>
+          </template>
+        </div>
+
+          <!-- More products... -->
+        </ul>
+      </div>
+      <div class="flex justify-center">
+        <a href="#" class="mx-auto mt-7 text-sm font-medium text-center text-teal-500 hover:text-cyan-900">Click for more</a>
+      </div>
+      <hr class="w-full text-teal-600 my-8">
+    </div>
+
+    <!-- END PRODUCT LIST CONTENT -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+  </body>
+</html>
