@@ -22,5 +22,5 @@ Bahasa/Framework yang digunakan
 2. Tailwind CSS
 3. Flowbite UI component
 4. Alpine JS
-5. Laravel
+5. Laravel (not available)
 6. Mysql
